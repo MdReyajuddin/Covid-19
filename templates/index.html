@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Covid-19 Updates By REYAJ</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1><span class="blue"></span>Cases Of<span class="blue"></span> <span class="yellow">Covid-19 in India</pan></h1>
+<h2>Created with love by <a href="#" target="_blank">Mohammad Reyajuddin</a></h2>
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>State</h1></th>
+			<th><h1>Affected</h1></th>
+			<th><h1>Cured</h1></th>
+			<th><h1>Deaths</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+{% for item in list %}
+		<tr>
+			<td>{{item.state}}</td>
+			<td>{{item.affected}}</td>
+			<td>{{item.cured}}</td>
+			<td>{{item.deaths}}</td>
+		</tr>
+{% endfor %}
+
+	</tbody>
+</table>
+<!-- partial -->
+  
+</body>
+</html>
